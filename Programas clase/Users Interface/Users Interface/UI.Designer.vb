@@ -30,8 +30,8 @@ Partial Class UI
         Me.btnMaximizar = New System.Windows.Forms.Button()
         Me.btnMinimizar = New System.Windows.Forms.Button()
         Me.PanelMenu = New System.Windows.Forms.Panel()
-        Me.PanelContenido = New System.Windows.Forms.Panel()
         Me.btnMenu = New System.Windows.Forms.Button()
+        Me.PanelContenido = New System.Windows.Forms.Panel()
         Me.timerOcultarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.timerMostrarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.PanelSuperior.SuspendLayout()
@@ -113,14 +113,6 @@ Partial Class UI
         Me.PanelMenu.Size = New System.Drawing.Size(232, 554)
         Me.PanelMenu.TabIndex = 1
         '
-        'PanelContenido
-        '
-        Me.PanelContenido.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelContenido.Location = New System.Drawing.Point(232, 50)
-        Me.PanelContenido.Name = "PanelContenido"
-        Me.PanelContenido.Size = New System.Drawing.Size(741, 554)
-        Me.PanelContenido.TabIndex = 2
-        '
         'btnMenu
         '
         Me.btnMenu.Anchor = System.Windows.Forms.AnchorStyles.Left
@@ -130,9 +122,17 @@ Partial Class UI
         Me.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMenu.Location = New System.Drawing.Point(167, 15)
         Me.btnMenu.Name = "btnMenu"
-        Me.btnMenu.Size = New System.Drawing.Size(50, 50)
+        Me.btnMenu.Size = New System.Drawing.Size(40, 40)
         Me.btnMenu.TabIndex = 3
         Me.btnMenu.UseVisualStyleBackColor = True
+        '
+        'PanelContenido
+        '
+        Me.PanelContenido.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelContenido.Location = New System.Drawing.Point(232, 50)
+        Me.PanelContenido.Name = "PanelContenido"
+        Me.PanelContenido.Size = New System.Drawing.Size(741, 554)
+        Me.PanelContenido.TabIndex = 2
         '
         'timerOcultarMenu
         '

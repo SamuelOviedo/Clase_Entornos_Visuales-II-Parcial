@@ -159,10 +159,10 @@
   </data>
   <data name="btnMenu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAACWSURBVFhH7ZBBCoAwEAP7z/7/HYoSyh6yDSsRetiBuVQzhY6mOZI55/WHyGvY2CHyGjZ+xOcy
-        5X28NIrPZcr7eKlT5DVs7BD5RsOezyHyGjZ2iLyGjSsis8jOU2Lsi8gssvOUGHOKvIaNHSLfaNjzOURe
-        w8YOkdewcSYmWyr/vsQLlJhsqfz7Ei9wiryGjR0i3zQnMcYNOXLBf2w6dlQAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAJZJREFUWEft
+        kEEKgDAQA/vP/v8dihLKHrINKxF62IG5VDOFjqY5kjnn9YfIa9jYIfIaNn7E5zLlfbw0is9lyvt4qVPk
+        NWzsEPlGw57PIfIaNnaIvIaNKyKzyM5TYuyLyCyy85QYc4q8ho0dIt9o2PM5RF7Dxg6R17BxJiZbKv++
+        xAuUmGyp/PsSL3CKvIaNHSLfNCcxxg05csF/bDp2VAAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="timerOcultarMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
