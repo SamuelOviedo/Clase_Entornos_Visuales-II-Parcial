@@ -14,6 +14,15 @@ Public Class UI
 
     End Sub
 
+    Private Sub PanelSuperior_Paint(sender As Object, e As PaintEventArgs) Handles panelSuperior.Paint
+
+    End Sub
+
+    Private Sub PanelSuperior_MouseMove(sender As Object, e As MouseEventArgs) Handles panelSuperior.MouseMove
+        ReleaseCapture()
+        SendMessage(Me.Handle, &H112&, &HF012&, 0)
+    End Sub
+
     Private Sub btnMaximizar_Click(sender As Object, e As EventArgs) Handles btnMaximizar.Click
         btnMaximizar.Visible = False
         btnRestaurar.Visible = True
@@ -30,35 +39,48 @@ Public Class UI
         Me.WindowState = FormWindowState.Normal
     End Sub
 
-    Private Sub PanelSuperior_Paint(sender As Object, e As PaintEventArgs) Handles PanelSuperior.Paint
-
+    Private Sub TimerOcultarMenu_Tick(sender As Object, e As EventArgs) Handles timerOcultarMenu.Tick
+        If panelLateral.Width <= 45 Then
+            Me.timerOcultarMenu.Enabled = False
+        Else
+            Me.PanelLateral.Width = PanelLateral.Width - 20
+        End If
     End Sub
 
-    Private Sub PanelSuperior_MouseMove(sender As Object, e As MouseEventArgs) Handles PanelSuperior.MouseMove
-        ReleaseCapture()
-        SendMessage(Me.Handle, &H112&, &HF012&, 0)
+    Private Sub TimerMostrar_Tick(sender As Object, e As EventArgs) Handles timerMostrarMenu.Tick
+        If panelLateral.Width >= 165 Then
+            Me.timerMostrarMenu.Enabled = False
+        Else
+            Me.panelLateral.Width = panelLateral.Width + 20
+        End If
     End Sub
 
     Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click
-        timerOcultarMenu.Enabled = True
-    End Sub
-
-    Private Sub timerOcultarMenu_Tick(sender As Object, e As EventArgs) Handles timerOcultarMenu.Tick
-        If PanelMenu.Width <= 60 Then
-            Me.timerOcultarMenu.Enabled = False
-        Else
-            Me.PanelMenu.Width = PanelMenu.Width - 20
-        End If
-    End Sub
-
-    Private Sub timerMostrarMenu_Tick(sender As Object, e As EventArgs) Handles timerMostrarMenu.Tick
-        If PanelMenu.Width = 165 Then
+        If panelLateral.Width = 165 Then
             timerOcultarMenu.Enabled = True
-
-        ElseIf PanelMenu.Width = 45 Then
+        ElseIf panelLateral.Width = 45 Then
             timerMostrarMenu.Enabled = True
-
         End If
-
     End Sub
+
+    Private Sub abrirFormulario(ByVal formHijo As Object)
+        If panelForms.Controls.Count > 0 Then
+            Me.panelForms.Controls.RemoveAt(0)
+        End If
+        Dim frm As Form = TryCast(formHijo, Form)
+        frm.TopLevel = False
+        frm.Dock = DockStyle.Fill
+        Me.panelForms.Controls.Add(frm)
+        Me.panelForms.Tag = frm
+        frm.Show()
+    End Sub
+
+    Private Sub btnProductos_Click(sender As Object, e As EventArgs) Handles btnProductos.Click
+        abrirFormulario(frmProductos)
+    End Sub
+
+    Private Sub btnEmpleados_Click(sender As Object, e As EventArgs) Handles btnEmpleados.Click
+        abrirFormulario(frmEmpleados)
+    End Sub
+
 End Class
