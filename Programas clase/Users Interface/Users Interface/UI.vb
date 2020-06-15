@@ -52,10 +52,13 @@ Public Class UI
     End Sub
 
     Private Sub timerMostrarMenu_Tick(sender As Object, e As EventArgs) Handles timerMostrarMenu.Tick
-        If PanelMenu.Width >= 210 Then
-            Me.timerMostrarMenu.Enabled = False
-        Else
-            Me.PanelMenu.Width = PanelMenu.Width + 20
+        If PanelMenu.Width = 165 Then
+            timerOcultarMenu.Enabled = True
+
+        ElseIf PanelMenu.Width = 45 Then
+            timerMostrarMenu.Enabled = True
+
         End If
+
     End Sub
 End Class
