@@ -49,7 +49,7 @@ Partial Class UI
         '
         'panelSuperior
         '
-        Me.panelSuperior.BackColor = System.Drawing.Color.Gray
+        Me.panelSuperior.BackColor = System.Drawing.Color.DodgerBlue
         Me.panelSuperior.Controls.Add(Me.btnRestaurar)
         Me.panelSuperior.Controls.Add(Me.btnCerrar)
         Me.panelSuperior.Controls.Add(Me.btnMaximizar)
@@ -122,7 +122,7 @@ Partial Class UI
         '
         'panelLateral
         '
-        Me.panelLateral.BackColor = System.Drawing.Color.DarkGray
+        Me.panelLateral.BackColor = System.Drawing.Color.Silver
         Me.panelLateral.Controls.Add(Me.PictureBox1)
         Me.panelLateral.Controls.Add(Me.Label1)
         Me.panelLateral.Controls.Add(Me.Panel3)
