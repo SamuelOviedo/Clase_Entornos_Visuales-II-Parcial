@@ -99,10 +99,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PrimeraTarea.Designer.vb">
-      <DependentUpon>PrimeraTarea.vb</DependentUpon>
+    <Compile Include="Arreglos.Designer.vb">
+      <DependentUpon>Arreglos.vb</DependentUpon>
     </Compile>
-    <Compile Include="PrimeraTarea.vb">
+    <Compile Include="Arreglos.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -116,8 +116,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrimeraTarea.resx">
-      <DependentUpon>PrimeraTarea.vb</DependentUpon>
+    <EmbeddedResource Include="Arreglos.resx">
+      <DependentUpon>Arreglos.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
