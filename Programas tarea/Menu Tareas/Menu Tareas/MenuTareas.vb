@@ -99,4 +99,8 @@
         MostrarSubClase(panelSubTarea)
 
     End Sub
+
+    Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
+        abrirFormulario(Bienvenida)
+    End Sub
 End Class
