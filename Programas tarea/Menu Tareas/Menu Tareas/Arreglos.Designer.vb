@@ -31,6 +31,7 @@ Partial Class Arreglos
         Me.cmbCompus = New System.Windows.Forms.ComboBox()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtCantComp = New System.Windows.Forms.MaskedTextBox()
         Me.btnRegist = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -50,7 +51,6 @@ Partial Class Arreglos
         Me.btnVender = New System.Windows.Forms.Button()
         Me.txtCantVender = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtCantComp = New System.Windows.Forms.MaskedTextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -150,6 +150,14 @@ Partial Class Arreglos
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Registro"
+        '
+        'txtCantComp
+        '
+        Me.txtCantComp.Location = New System.Drawing.Point(293, 29)
+        Me.txtCantComp.Mask = "99"
+        Me.txtCantComp.Name = "txtCantComp"
+        Me.txtCantComp.Size = New System.Drawing.Size(48, 29)
+        Me.txtCantComp.TabIndex = 8
         '
         'btnRegist
         '
@@ -357,14 +365,6 @@ Partial Class Arreglos
         Me.Label10.Size = New System.Drawing.Size(138, 22)
         Me.Label10.TabIndex = 0
         Me.Label10.Text = "Cant. Vender:"
-        '
-        'txtCantComp
-        '
-        Me.txtCantComp.Location = New System.Drawing.Point(293, 29)
-        Me.txtCantComp.Mask = "99"
-        Me.txtCantComp.Name = "txtCantComp"
-        Me.txtCantComp.Size = New System.Drawing.Size(48, 29)
-        Me.txtCantComp.TabIndex = 8
         '
         'Arreglos
         '

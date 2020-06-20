@@ -8,10 +8,10 @@
 
     Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click
 
-        If (slideBar.Width = 232) Then
+        If (slideBar.Width = 239) Then
 
             slideBar.Visible = False
-            slideBar.Width = 75
+            slideBar.Width = 70
             panelOpciones.Width = 90
             lineaSideBar.Width = 50
             animacionSlideBar.Show(slideBar)
@@ -19,8 +19,8 @@
         Else
 
             slideBar.Visible = False
-            slideBar.Width = 232
-            panelOpciones.Width = 260
+            slideBar.Width = 239
+            panelOpciones.Width = 268
             lineaSideBar.Width = 215
             animacionSlidebarBack.Show(slideBar)
 

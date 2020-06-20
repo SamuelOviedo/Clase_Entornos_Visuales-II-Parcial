@@ -40,10 +40,19 @@
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        cmbComputadoras.Text = ""
         cmbComputadoras.Items.Clear()
+        cmbPrecios.Text = ""
         cmbPrecios.Items.Clear()
+        cmbCompus.Text = ""
         cmbCompus.Items.Clear()
         txtCant.Clear()
+        txtMarca.Clear()
+        txtModelo.Clear()
+        txtPrecio.Clear()
+        txtCantidad.Clear()
+        txtCantVender.Clear()
+
     End Sub
 
     Private Sub Arreglos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -66,6 +75,8 @@
             mComputadoras(i, 3) = InputBox("Ingrese la cantidad N." & (i + 1), "Registro")
             index = i
         Next
+
+        txtCantComp.Clear()
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
@@ -105,8 +116,8 @@
         Else
             mComputadoras(index, 3) = stock - cantVender
             MessageBox.Show("Venta Realizada", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            txtCantidad.Text = stock - cantVender
-        End If
+            txtCantidad.Text = cantVender - stock
 
+        End If
     End Sub
 End Class
