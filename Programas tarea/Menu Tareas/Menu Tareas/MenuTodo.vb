@@ -1,4 +1,4 @@
-﻿Public Class MenuTareas
+﻿Public Class MenuTodo
 
     Private Sub btnRest_Click(sender As Object, e As EventArgs)
         btnRest.Visible = False

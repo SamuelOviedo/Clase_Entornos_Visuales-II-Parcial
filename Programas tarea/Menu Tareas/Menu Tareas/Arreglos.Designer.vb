@@ -23,8 +23,8 @@ Partial Class Arreglos
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.cmbPrecios = New System.Windows.Forms.ComboBox()
-        Me.btnSolicitar = New System.Windows.Forms.Button()
-        Me.btnGenerar = New System.Windows.Forms.Button()
+        Me.btnGenerarPre = New System.Windows.Forms.Button()
+        Me.btnGenerarOrd = New System.Windows.Forms.Button()
         Me.cmbComputadoras = New System.Windows.Forms.ComboBox()
         Me.txtCant = New System.Windows.Forms.TextBox()
         Me.btnSolicitarInput = New System.Windows.Forms.Button()
@@ -38,8 +38,12 @@ Partial Class Arreglos
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.btnLimpiarEsp = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.btnVender = New System.Windows.Forms.Button()
+        Me.txtCantVender = New System.Windows.Forms.TextBox()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtPrecio = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -47,15 +51,10 @@ Partial Class Arreglos
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtMarca = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.btnVender = New System.Windows.Forms.Button()
-        Me.txtCantVender = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
-        Me.GroupBox5.SuspendLayout()
         Me.SuspendLayout()
         '
         'cmbPrecios
@@ -67,27 +66,27 @@ Partial Class Arreglos
         Me.cmbPrecios.Size = New System.Drawing.Size(180, 29)
         Me.cmbPrecios.TabIndex = 3
         '
-        'btnSolicitar
+        'btnGenerarPre
         '
-        Me.btnSolicitar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnSolicitar.Font = New System.Drawing.Font("Shrikhand", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSolicitar.Location = New System.Drawing.Point(272, 150)
-        Me.btnSolicitar.Name = "btnSolicitar"
-        Me.btnSolicitar.Size = New System.Drawing.Size(115, 71)
-        Me.btnSolicitar.TabIndex = 2
-        Me.btnSolicitar.Text = "Generar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "precios"
-        Me.btnSolicitar.UseVisualStyleBackColor = False
+        Me.btnGenerarPre.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnGenerarPre.Font = New System.Drawing.Font("Shrikhand", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGenerarPre.Location = New System.Drawing.Point(272, 150)
+        Me.btnGenerarPre.Name = "btnGenerarPre"
+        Me.btnGenerarPre.Size = New System.Drawing.Size(115, 71)
+        Me.btnGenerarPre.TabIndex = 2
+        Me.btnGenerarPre.Text = "Generar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "precios"
+        Me.btnGenerarPre.UseVisualStyleBackColor = False
         '
-        'btnGenerar
+        'btnGenerarOrd
         '
-        Me.btnGenerar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnGenerar.Font = New System.Drawing.Font("Shrikhand", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGenerar.Location = New System.Drawing.Point(49, 38)
-        Me.btnGenerar.Name = "btnGenerar"
-        Me.btnGenerar.Size = New System.Drawing.Size(157, 88)
-        Me.btnGenerar.TabIndex = 1
-        Me.btnGenerar.Text = "  Generar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ordenadores"
-        Me.btnGenerar.UseVisualStyleBackColor = False
+        Me.btnGenerarOrd.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnGenerarOrd.Font = New System.Drawing.Font("Shrikhand", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGenerarOrd.Location = New System.Drawing.Point(49, 38)
+        Me.btnGenerarOrd.Name = "btnGenerarOrd"
+        Me.btnGenerarOrd.Size = New System.Drawing.Size(157, 88)
+        Me.btnGenerarOrd.TabIndex = 1
+        Me.btnGenerarOrd.Text = "  Generar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ordenadores"
+        Me.btnGenerarOrd.UseVisualStyleBackColor = False
         '
         'cmbComputadoras
         '
@@ -130,11 +129,11 @@ Partial Class Arreglos
         '
         Me.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnLimpiar.Font = New System.Drawing.Font("Shrikhand", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLimpiar.Location = New System.Drawing.Point(379, 331)
+        Me.btnLimpiar.Location = New System.Drawing.Point(328, 336)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(132, 42)
+        Me.btnLimpiar.Size = New System.Drawing.Size(183, 37)
         Me.btnLimpiar.TabIndex = 2
-        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.Text = "Limpiar todo"
         Me.btnLimpiar.UseVisualStyleBackColor = False
         '
         'GroupBox1
@@ -183,10 +182,10 @@ Partial Class Arreglos
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Silver
-        Me.GroupBox2.Controls.Add(Me.btnGenerar)
+        Me.GroupBox2.Controls.Add(Me.btnGenerarOrd)
         Me.GroupBox2.Controls.Add(Me.cmbPrecios)
         Me.GroupBox2.Controls.Add(Me.cmbComputadoras)
-        Me.GroupBox2.Controls.Add(Me.btnSolicitar)
+        Me.GroupBox2.Controls.Add(Me.btnGenerarPre)
         Me.GroupBox2.Font = New System.Drawing.Font("Russo One", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(12, 25)
         Me.GroupBox2.Name = "GroupBox2"
@@ -223,8 +222,12 @@ Partial Class Arreglos
         'GroupBox4
         '
         Me.GroupBox4.BackColor = System.Drawing.Color.Silver
+        Me.GroupBox4.Controls.Add(Me.btnLimpiarEsp)
         Me.GroupBox4.Controls.Add(Me.btnBuscar)
+        Me.GroupBox4.Controls.Add(Me.btnVender)
+        Me.GroupBox4.Controls.Add(Me.txtCantVender)
         Me.GroupBox4.Controls.Add(Me.txtCantidad)
+        Me.GroupBox4.Controls.Add(Me.Label10)
         Me.GroupBox4.Controls.Add(Me.Label6)
         Me.GroupBox4.Controls.Add(Me.txtPrecio)
         Me.GroupBox4.Controls.Add(Me.Label5)
@@ -235,10 +238,21 @@ Partial Class Arreglos
         Me.GroupBox4.Font = New System.Drawing.Font("Russo One", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.Location = New System.Drawing.Point(517, 244)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(511, 271)
+        Me.GroupBox4.Size = New System.Drawing.Size(511, 454)
         Me.GroupBox4.TabIndex = 6
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Registro"
+        '
+        'btnLimpiarEsp
+        '
+        Me.btnLimpiarEsp.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnLimpiarEsp.Font = New System.Drawing.Font("Shrikhand", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLimpiarEsp.Location = New System.Drawing.Point(153, 253)
+        Me.btnLimpiarEsp.Name = "btnLimpiarEsp"
+        Me.btnLimpiarEsp.Size = New System.Drawing.Size(208, 35)
+        Me.btnLimpiarEsp.TabIndex = 9
+        Me.btnLimpiarEsp.Text = "Limpiar"
+        Me.btnLimpiarEsp.UseVisualStyleBackColor = False
         '
         'btnBuscar
         '
@@ -251,6 +265,25 @@ Partial Class Arreglos
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = False
         '
+        'btnVender
+        '
+        Me.btnVender.BackColor = System.Drawing.Color.Teal
+        Me.btnVender.Font = New System.Drawing.Font("Shrikhand", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVender.Location = New System.Drawing.Point(177, 356)
+        Me.btnVender.Name = "btnVender"
+        Me.btnVender.Size = New System.Drawing.Size(164, 52)
+        Me.btnVender.TabIndex = 8
+        Me.btnVender.Text = "Vender"
+        Me.btnVender.UseVisualStyleBackColor = False
+        '
+        'txtCantVender
+        '
+        Me.txtCantVender.Font = New System.Drawing.Font("Rockwell", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCantVender.Location = New System.Drawing.Point(177, 310)
+        Me.txtCantVender.Name = "txtCantVender"
+        Me.txtCantVender.Size = New System.Drawing.Size(109, 31)
+        Me.txtCantVender.TabIndex = 1
+        '
         'txtCantidad
         '
         Me.txtCantidad.Font = New System.Drawing.Font("Rockwell", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -258,6 +291,16 @@ Partial Class Arreglos
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(106, 27)
         Me.txtCantidad.TabIndex = 7
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Rockwell", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(19, 313)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(138, 22)
+        Me.Label10.TabIndex = 0
+        Me.Label10.Text = "Cant. Vender:"
         '
         'Label6
         '
@@ -323,49 +366,6 @@ Partial Class Arreglos
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Marca:"
         '
-        'GroupBox5
-        '
-        Me.GroupBox5.BackColor = System.Drawing.Color.Silver
-        Me.GroupBox5.Controls.Add(Me.btnVender)
-        Me.GroupBox5.Controls.Add(Me.txtCantVender)
-        Me.GroupBox5.Controls.Add(Me.Label10)
-        Me.GroupBox5.Font = New System.Drawing.Font("Russo One", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox5.Location = New System.Drawing.Point(460, 538)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(511, 159)
-        Me.GroupBox5.TabIndex = 7
-        Me.GroupBox5.TabStop = False
-        Me.GroupBox5.Text = "Registro"
-        '
-        'btnVender
-        '
-        Me.btnVender.BackColor = System.Drawing.Color.Teal
-        Me.btnVender.Font = New System.Drawing.Font("Shrikhand", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnVender.Location = New System.Drawing.Point(189, 91)
-        Me.btnVender.Name = "btnVender"
-        Me.btnVender.Size = New System.Drawing.Size(164, 52)
-        Me.btnVender.TabIndex = 8
-        Me.btnVender.Text = "Vender"
-        Me.btnVender.UseVisualStyleBackColor = False
-        '
-        'txtCantVender
-        '
-        Me.txtCantVender.Font = New System.Drawing.Font("Rockwell", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCantVender.Location = New System.Drawing.Point(189, 45)
-        Me.txtCantVender.Name = "txtCantVender"
-        Me.txtCantVender.Size = New System.Drawing.Size(109, 31)
-        Me.txtCantVender.TabIndex = 1
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Rockwell", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(45, 53)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(138, 22)
-        Me.Label10.TabIndex = 0
-        Me.Label10.Text = "Cant. Vender:"
-        '
         'Arreglos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -374,7 +374,6 @@ Partial Class Arreglos
         Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.LightGray
         Me.ClientSize = New System.Drawing.Size(1116, 724)
-        Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -390,16 +389,14 @@ Partial Class Arreglos
         Me.GroupBox3.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        Me.GroupBox5.ResumeLayout(False)
-        Me.GroupBox5.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents btnGenerar As Button
+    Friend WithEvents btnGenerarOrd As Button
     Friend WithEvents cmbComputadoras As ComboBox
     Friend WithEvents cmbCompus As ComboBox
     Friend WithEvents cmbPrecios As ComboBox
-    Friend WithEvents btnSolicitar As Button
+    Friend WithEvents btnGenerarPre As Button
     Friend WithEvents txtCant As TextBox
     Friend WithEvents btnSolicitarInput As Button
     Friend WithEvents btnLimpiar As Button
@@ -419,9 +416,9 @@ Partial Class Arreglos
     Friend WithEvents Label4 As Label
     Friend WithEvents txtMarca As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents btnVender As Button
     Friend WithEvents txtCantVender As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents txtCantComp As MaskedTextBox
+    Friend WithEvents btnLimpiarEsp As Button
 End Class
