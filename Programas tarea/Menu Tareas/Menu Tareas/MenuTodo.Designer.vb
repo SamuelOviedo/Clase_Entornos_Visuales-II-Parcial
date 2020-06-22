@@ -24,8 +24,8 @@ Partial Class MenuTodo
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuTodo))
-        Dim Animation1 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
-        Dim Animation2 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim Animation3 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim Animation4 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Me.panelTop = New System.Windows.Forms.Panel()
         Me.btnRest = New System.Windows.Forms.Button()
         Me.btnMin = New System.Windows.Forms.Button()
@@ -42,7 +42,7 @@ Partial Class MenuTodo
         Me.panelSubClase = New System.Windows.Forms.Panel()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.btnArreglos = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.btnLibretaAhorro = New System.Windows.Forms.Button()
         Me.btnProgClas = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuGradientPanel1 = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.btnHome = New System.Windows.Forms.PictureBox()
@@ -318,7 +318,7 @@ Partial Class MenuTodo
         Me.panelSubClase.BackColor = System.Drawing.Color.Transparent
         Me.panelSubClase.Controls.Add(Me.Button8)
         Me.panelSubClase.Controls.Add(Me.btnArreglos)
-        Me.panelSubClase.Controls.Add(Me.Button7)
+        Me.panelSubClase.Controls.Add(Me.btnLibretaAhorro)
         Me.animacionSlidebarBack.SetDecoration(Me.panelSubClase, BunifuAnimatorNS.DecorationType.None)
         Me.animacionSlideBar.SetDecoration(Me.panelSubClase, BunifuAnimatorNS.DecorationType.None)
         Me.panelSubClase.Dock = System.Windows.Forms.DockStyle.Top
@@ -371,25 +371,25 @@ Partial Class MenuTodo
         Me.btnArreglos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnArreglos.UseVisualStyleBackColor = False
         '
-        'Button7
+        'btnLibretaAhorro
         '
-        Me.Button7.BackColor = System.Drawing.Color.Transparent
-        Me.animacionSlideBar.SetDecoration(Me.Button7, BunifuAnimatorNS.DecorationType.None)
-        Me.animacionSlidebarBack.SetDecoration(Me.Button7, BunifuAnimatorNS.DecorationType.None)
-        Me.Button7.FlatAppearance.BorderSize = 0
-        Me.Button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Shrikhand", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(75, Byte), Integer))
-        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button7.Location = New System.Drawing.Point(15, 82)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(304, 51)
-        Me.Button7.TabIndex = 5
-        Me.Button7.Text = "Segundo"
-        Me.Button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button7.UseVisualStyleBackColor = False
+        Me.btnLibretaAhorro.BackColor = System.Drawing.Color.Transparent
+        Me.animacionSlideBar.SetDecoration(Me.btnLibretaAhorro, BunifuAnimatorNS.DecorationType.None)
+        Me.animacionSlidebarBack.SetDecoration(Me.btnLibretaAhorro, BunifuAnimatorNS.DecorationType.None)
+        Me.btnLibretaAhorro.FlatAppearance.BorderSize = 0
+        Me.btnLibretaAhorro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnLibretaAhorro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnLibretaAhorro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLibretaAhorro.Font = New System.Drawing.Font("Shrikhand", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLibretaAhorro.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(75, Byte), Integer))
+        Me.btnLibretaAhorro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnLibretaAhorro.Location = New System.Drawing.Point(15, 82)
+        Me.btnLibretaAhorro.Name = "btnLibretaAhorro"
+        Me.btnLibretaAhorro.Size = New System.Drawing.Size(304, 51)
+        Me.btnLibretaAhorro.TabIndex = 5
+        Me.btnLibretaAhorro.Text = "Libreta Ahorro"
+        Me.btnLibretaAhorro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnLibretaAhorro.UseVisualStyleBackColor = False
         '
         'btnProgClas
         '
@@ -501,22 +501,22 @@ Partial Class MenuTodo
         '
         Me.animacionSlideBar.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlideAndRotate
         Me.animacionSlideBar.Cursor = Nothing
-        Animation1.AnimateOnlyDifferences = True
-        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
-        Animation1.LeafCoeff = 0!
-        Animation1.MaxTime = 1.0!
-        Animation1.MinTime = 0!
-        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
-        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
-        Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(50)
-        Animation1.RotateCoeff = 0.3!
-        Animation1.RotateLimit = 0.2!
-        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
-        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
-        Animation1.TimeCoeff = 0!
-        Animation1.TransparencyCoeff = 0!
-        Me.animacionSlideBar.DefaultAnimation = Animation1
+        Animation3.AnimateOnlyDifferences = True
+        Animation3.BlindCoeff = CType(resources.GetObject("Animation3.BlindCoeff"), System.Drawing.PointF)
+        Animation3.LeafCoeff = 0!
+        Animation3.MaxTime = 1.0!
+        Animation3.MinTime = 0!
+        Animation3.MosaicCoeff = CType(resources.GetObject("Animation3.MosaicCoeff"), System.Drawing.PointF)
+        Animation3.MosaicShift = CType(resources.GetObject("Animation3.MosaicShift"), System.Drawing.PointF)
+        Animation3.MosaicSize = 0
+        Animation3.Padding = New System.Windows.Forms.Padding(50)
+        Animation3.RotateCoeff = 0.3!
+        Animation3.RotateLimit = 0.2!
+        Animation3.ScaleCoeff = CType(resources.GetObject("Animation3.ScaleCoeff"), System.Drawing.PointF)
+        Animation3.SlideCoeff = CType(resources.GetObject("Animation3.SlideCoeff"), System.Drawing.PointF)
+        Animation3.TimeCoeff = 0!
+        Animation3.TransparencyCoeff = 0!
+        Me.animacionSlideBar.DefaultAnimation = Animation3
         '
         'panelContenido
         '
@@ -533,22 +533,22 @@ Partial Class MenuTodo
         '
         Me.animacionSlidebarBack.AnimationType = BunifuAnimatorNS.AnimationType.ScaleAndHorizSlide
         Me.animacionSlidebarBack.Cursor = Nothing
-        Animation2.AnimateOnlyDifferences = True
-        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
-        Animation2.LeafCoeff = 0!
-        Animation2.MaxTime = 1.0!
-        Animation2.MinTime = 0!
-        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
-        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
-        Animation2.MosaicSize = 0
-        Animation2.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
-        Animation2.RotateCoeff = 0!
-        Animation2.RotateLimit = 0!
-        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
-        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
-        Animation2.TimeCoeff = 0!
-        Animation2.TransparencyCoeff = 0!
-        Me.animacionSlidebarBack.DefaultAnimation = Animation2
+        Animation4.AnimateOnlyDifferences = True
+        Animation4.BlindCoeff = CType(resources.GetObject("Animation4.BlindCoeff"), System.Drawing.PointF)
+        Animation4.LeafCoeff = 0!
+        Animation4.MaxTime = 1.0!
+        Animation4.MinTime = 0!
+        Animation4.MosaicCoeff = CType(resources.GetObject("Animation4.MosaicCoeff"), System.Drawing.PointF)
+        Animation4.MosaicShift = CType(resources.GetObject("Animation4.MosaicShift"), System.Drawing.PointF)
+        Animation4.MosaicSize = 0
+        Animation4.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
+        Animation4.RotateCoeff = 0!
+        Animation4.RotateLimit = 0!
+        Animation4.ScaleCoeff = CType(resources.GetObject("Animation4.ScaleCoeff"), System.Drawing.PointF)
+        Animation4.SlideCoeff = CType(resources.GetObject("Animation4.SlideCoeff"), System.Drawing.PointF)
+        Animation4.TimeCoeff = 0!
+        Animation4.TransparencyCoeff = 0!
+        Me.animacionSlidebarBack.DefaultAnimation = Animation4
         '
         'moverForma
         '
@@ -602,7 +602,7 @@ Partial Class MenuTodo
     Friend WithEvents btnMax As Button
     Friend WithEvents btnCerrar As Button
     Friend WithEvents Button8 As Button
-    Friend WithEvents Button7 As Button
+    Friend WithEvents btnLibretaAhorro As Button
     Friend WithEvents btnArreglos As Button
     Friend WithEvents BunifuGradientPanel1 As Bunifu.Framework.UI.BunifuGradientPanel
     Friend WithEvents Button1 As Button

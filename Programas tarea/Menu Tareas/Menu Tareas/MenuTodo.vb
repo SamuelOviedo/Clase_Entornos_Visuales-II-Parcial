@@ -103,4 +103,8 @@
     Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
         abrirFormulario(Bienvenida)
     End Sub
+
+    Private Sub btnLibretaAhorro_Click(sender As Object, e As EventArgs) Handles btnLibretaAhorro.Click
+        abrirFormulario(LibretaAhorro)
+    End Sub
 End Class
