@@ -83,6 +83,12 @@
     <Compile Include="Bienvenida.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BolsaSolidaria.Designer.vb">
+      <DependentUpon>BolsaSolidaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BolsaSolidaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LibretaAhorro.Designer.vb">
       <DependentUpon>LibretaAhorro.vb</DependentUpon>
     </Compile>
@@ -121,6 +127,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Bienvenida.resx">
       <DependentUpon>Bienvenida.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BolsaSolidaria.resx">
+      <DependentUpon>BolsaSolidaria.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LibretaAhorro.resx">
       <DependentUpon>LibretaAhorro.vb</DependentUpon>

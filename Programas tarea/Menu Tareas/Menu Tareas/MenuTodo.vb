@@ -107,4 +107,8 @@
     Private Sub btnLibretaAhorro_Click(sender As Object, e As EventArgs) Handles btnLibretaAhorro.Click
         abrirFormulario(LibretaAhorro)
     End Sub
+
+    Private Sub btnBolsaSolidaria_Click(sender As Object, e As EventArgs) Handles btnBolsaSolidaria.Click
+        abrirFormulario(BolsaSolidaria)
+    End Sub
 End Class

@@ -36,7 +36,7 @@ Partial Class MenuTodo
         Me.slideBar = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.panelSubTarea = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnBolsaSolidaria = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btnProgTar = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.panelSubClase = New System.Windows.Forms.Panel()
@@ -204,7 +204,7 @@ Partial Class MenuTodo
         '
         Me.panelSubTarea.BackColor = System.Drawing.Color.Transparent
         Me.panelSubTarea.Controls.Add(Me.Button1)
-        Me.panelSubTarea.Controls.Add(Me.Button3)
+        Me.panelSubTarea.Controls.Add(Me.btnBolsaSolidaria)
         Me.panelSubTarea.Controls.Add(Me.Button2)
         Me.animacionSlidebarBack.SetDecoration(Me.panelSubTarea, BunifuAnimatorNS.DecorationType.None)
         Me.animacionSlideBar.SetDecoration(Me.panelSubTarea, BunifuAnimatorNS.DecorationType.None)
@@ -235,25 +235,25 @@ Partial Class MenuTodo
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'Button3
+        'btnBolsaSolidaria
         '
-        Me.Button3.BackColor = System.Drawing.Color.Transparent
-        Me.animacionSlideBar.SetDecoration(Me.Button3, BunifuAnimatorNS.DecorationType.None)
-        Me.animacionSlidebarBack.SetDecoration(Me.Button3, BunifuAnimatorNS.DecorationType.None)
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Shrikhand", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(75, Byte), Integer))
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(15, 7)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(304, 51)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "Primera"
-        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btnBolsaSolidaria.BackColor = System.Drawing.Color.Transparent
+        Me.animacionSlideBar.SetDecoration(Me.btnBolsaSolidaria, BunifuAnimatorNS.DecorationType.None)
+        Me.animacionSlidebarBack.SetDecoration(Me.btnBolsaSolidaria, BunifuAnimatorNS.DecorationType.None)
+        Me.btnBolsaSolidaria.FlatAppearance.BorderSize = 0
+        Me.btnBolsaSolidaria.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnBolsaSolidaria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnBolsaSolidaria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBolsaSolidaria.Font = New System.Drawing.Font("Shrikhand", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBolsaSolidaria.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(75, Byte), Integer))
+        Me.btnBolsaSolidaria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBolsaSolidaria.Location = New System.Drawing.Point(15, 7)
+        Me.btnBolsaSolidaria.Name = "btnBolsaSolidaria"
+        Me.btnBolsaSolidaria.Size = New System.Drawing.Size(304, 51)
+        Me.btnBolsaSolidaria.TabIndex = 4
+        Me.btnBolsaSolidaria.Text = "Bolsa solidaria"
+        Me.btnBolsaSolidaria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnBolsaSolidaria.UseVisualStyleBackColor = False
         '
         'Button2
         '
@@ -387,7 +387,7 @@ Partial Class MenuTodo
         Me.btnLibretaAhorro.Name = "btnLibretaAhorro"
         Me.btnLibretaAhorro.Size = New System.Drawing.Size(304, 51)
         Me.btnLibretaAhorro.TabIndex = 5
-        Me.btnLibretaAhorro.Text = "Libreta Ahorro"
+        Me.btnLibretaAhorro.Text = "Libreta ahorro"
         Me.btnLibretaAhorro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnLibretaAhorro.UseVisualStyleBackColor = False
         '
@@ -607,7 +607,7 @@ Partial Class MenuTodo
     Friend WithEvents BunifuGradientPanel1 As Bunifu.Framework.UI.BunifuGradientPanel
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnBolsaSolidaria As Button
     Friend WithEvents btnProgClas As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents panelSubClase As Panel
     Friend WithEvents btnProgTar As Bunifu.Framework.UI.BunifuFlatButton
