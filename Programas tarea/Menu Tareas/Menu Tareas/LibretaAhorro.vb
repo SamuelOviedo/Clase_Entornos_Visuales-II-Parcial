@@ -3,7 +3,7 @@
 Public Class LibretaAhorro
     Private monto(), total As Double
     Private nombre, numId, numRegisId, pais, ciudad, datos(,) As String
-    Private edad, contador, usuario As Integer
+    Private edad, contador, usuario, montoU As Integer
 
     'Procedimientos
     Private Sub activarControles()
@@ -63,10 +63,10 @@ Public Class LibretaAhorro
     Private Sub btnCalcular_Click(sender As Object, e As EventArgs) Handles btnCalcular.Click
         Dim Inte As Double
 
-        Inte = monto(usuario) * 0.3
+        Inte = monto(contador) * 0.3
 
         txtInteres.Text = Inte
-        txtTotal.Text = monto(usuario) + Inte
+        txtTotal.Text = monto(contador) + Inte
 
     End Sub
 
@@ -75,6 +75,7 @@ Public Class LibretaAhorro
         limpiar()
 
         ReDim datos(10, 5)
+        ReDim monto(10)
 
         If numId.Length <> 15 Then
             MessageBox.Show("Ingrese un numero de identidad valido", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -103,14 +104,14 @@ Por favor llene los siguientes datos:", "Registro", MessageBoxButtons.OK, Messag
             mtbIngresoId.Clear()
         Else
 
-            While numRegisId <> datos(usuario, 0)
-            usuario += 1
-
-            End While
+            Do
+                usuario += 1
+                Exit Do
+            Loop While numRegisId <> datos(usuario, 0)
 
             MessageBox.Show("Numero de identidad correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            mostrarSaldo(contador)
-            mostrarDatos(contador)
+            mostrarSaldo(usuario)
+            mostrarDatos(usuario)
             mtbIngresoId.Clear()
             activarControles()
 
@@ -124,11 +125,11 @@ Por favor llene los siguientes datos:", "Registro", MessageBoxButtons.OK, Messag
     Private Sub btnDepositar_Click(sender As Object, e As EventArgs) Handles btnDepositar.Click
         Dim deposito As Double
 
-        monto(contador) = Val(txtSaldo.Text)
+        monto(usuario) = Val(txtSaldo.Text)
 
-        If (monto(contador) > 0) Then
+        If (monto(usuario) > 0) Then
             activarControles()
-            mostrarSaldo(contador)
+            mostrarSaldo(usuario)
 
         Else
             MessageBox.Show("Monto mayor a 0", "Ingresar monto correcto", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -136,7 +137,7 @@ Por favor llene los siguientes datos:", "Registro", MessageBoxButtons.OK, Messag
         End If
 
         deposito = leer("Depositar")
-        monto(contador) += deposito
+        monto(usuario) += deposito
         lstDepositos.Items.Add(deposito)
         mostrarSaldo(usuario)
     End Sub
@@ -144,11 +145,11 @@ Por favor llene los siguientes datos:", "Registro", MessageBoxButtons.OK, Messag
     Private Sub btnRetirar_Click(sender As Object, e As EventArgs) Handles btnRetirar.Click
         Dim retiro As Double
 
-        monto(contador) = Val(txtSaldo.Text)
+        monto(usuario) = Val(txtSaldo.Text)
 
-        If (monto(contador) > 0) Then
+        If (monto(usuario) > 0) Then
             activarControles()
-            mostrarSaldo(contador)
+            mostrarSaldo(usuario)
 
         Else
             MessageBox.Show("Monto mayor a 0", "Ingresar monto correcto", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -156,12 +157,14 @@ Por favor llene los siguientes datos:", "Registro", MessageBoxButtons.OK, Messag
         End If
 
         retiro = leer("Retirar")
-        If (retiro > monto(contador)) Then
+        If (retiro > monto(usuario)) Then
             MessageBox.Show("Saldo insuficiente", "Deposite mas", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
         Else
-            monto(contador) -= retiro
+            monto(usuario) -= retiro
             lstRetiros.Items.Add(retiro)
-            mostrarSaldo(contador)
+            mostrarSaldo(usuario)
+
         End If
     End Sub
 End Class
