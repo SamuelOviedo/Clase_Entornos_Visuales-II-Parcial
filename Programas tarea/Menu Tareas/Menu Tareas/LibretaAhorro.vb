@@ -1,9 +1,9 @@
 ﻿Imports System.ComponentModel
 
 Public Class LibretaAhorro
-    Private monto(), total As Double
-    Private nombre, numId, numRegisId, pais, ciudad, datos(,) As String
-    Private edad, contador, usuario, montoU As Integer
+    Private monto(9), total As Double
+    Private nombre, numId, numRegisId, pais, ciudad, datos(9, 4) As String
+    Private edad, contador, usuario As Integer
 
     'Procedimientos
     Private Sub activarControles()
@@ -17,6 +17,13 @@ Public Class LibretaAhorro
         btnRegistrar.Enabled = True
         btnRetirar.Enabled = False
         btnDepositar.Enabled = False
+        mtbSalidaId.Enabled = False
+        txtNombre.Enabled = False
+        mtbEdad.Enabled = False
+        txtPais.Enabled = False
+        txtCiudad.Enabled = False
+        txtInteres.Enabled = False
+        txtTotal.Enabled = False
     End Sub
 
     Private Sub limpiar()
@@ -31,6 +38,8 @@ Public Class LibretaAhorro
         txtNombre.Clear()
         txtPais.Clear()
         txtCiudad.Clear()
+        txtInteres.Clear()
+        txtTotal.Clear()
 
     End Sub
 
@@ -63,10 +72,10 @@ Public Class LibretaAhorro
     Private Sub btnCalcular_Click(sender As Object, e As EventArgs) Handles btnCalcular.Click
         Dim Inte As Double
 
-        Inte = monto(contador) * 0.3
+        Inte = monto(usuario) * 0.3
 
         txtInteres.Text = Inte
-        txtTotal.Text = monto(contador) + Inte
+        txtTotal.Text = monto(usuario) + Inte
 
     End Sub
 
@@ -74,12 +83,9 @@ Public Class LibretaAhorro
         numId = mtbNumId.Text
         limpiar()
 
-        ReDim datos(10, 5)
-        ReDim monto(10)
-
         If numId.Length <> 15 Then
             MessageBox.Show("Ingrese un numero de identidad valido", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-
+            mtbNumId.Clear()
         Else
             MessageBox.Show("Numero de identidad correcto,
 Por favor llene los siguientes datos:", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -99,15 +105,15 @@ Por favor llene los siguientes datos:", "Registro", MessageBoxButtons.OK, Messag
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
         numRegisId = mtbIngresoId.Text
         usuario = 0
+
         If numRegisId.Length <> 15 Then
             MessageBox.Show("Ingrese un numero de identidad valido", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             mtbIngresoId.Clear()
-        Else
 
-            Do
+        Else
+            Do While numRegisId <> datos(usuario, 0)
                 usuario += 1
-                Exit Do
-            Loop While numRegisId <> datos(usuario, 0)
+            Loop
 
             MessageBox.Show("Numero de identidad correcto", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
             mostrarSaldo(usuario)
