@@ -58,27 +58,22 @@ Public Class BolsaSolidaria
         Dim respuesta As Integer
 
         For i = 0 To 9 Step 1
-
             If IdUsuario = info(i, 0) Then
                 respuesta = 1
-
             Else
                 respuesta = 0
-
             End If
         Next
 
         If respuesta = 1 Then
             Return 1
-
         Else
             Return 0
-
         End If
+
     End Function
 
     Private Sub imprimirDatos(Posicion)
-
         dgvReporte.Rows.Add(info(Posicion, 0), info(Posicion, 1), info(Posicion, 2), info(Posicion, 3), info(Posicion, 4), info(Posicion, 5), info(Posicion, 6))
 
     End Sub
