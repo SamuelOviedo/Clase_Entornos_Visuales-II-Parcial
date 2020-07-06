@@ -40,7 +40,7 @@ Partial Class MenuTodo
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btnProgTar = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.panelSubClase = New System.Windows.Forms.Panel()
-        Me.Button8 = New System.Windows.Forms.Button()
+        Me.btnCRUD = New System.Windows.Forms.Button()
         Me.btnArreglos = New System.Windows.Forms.Button()
         Me.btnLibretaAhorro = New System.Windows.Forms.Button()
         Me.btnProgClas = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -316,7 +316,7 @@ Partial Class MenuTodo
         'panelSubClase
         '
         Me.panelSubClase.BackColor = System.Drawing.Color.Transparent
-        Me.panelSubClase.Controls.Add(Me.Button8)
+        Me.panelSubClase.Controls.Add(Me.btnCRUD)
         Me.panelSubClase.Controls.Add(Me.btnArreglos)
         Me.panelSubClase.Controls.Add(Me.btnLibretaAhorro)
         Me.animacionSlidebarBack.SetDecoration(Me.panelSubClase, BunifuAnimatorNS.DecorationType.None)
@@ -328,25 +328,25 @@ Partial Class MenuTodo
         Me.panelSubClase.TabIndex = 2
         Me.panelSubClase.Visible = False
         '
-        'Button8
+        'btnCRUD
         '
-        Me.Button8.BackColor = System.Drawing.Color.Transparent
-        Me.animacionSlideBar.SetDecoration(Me.Button8, BunifuAnimatorNS.DecorationType.None)
-        Me.animacionSlidebarBack.SetDecoration(Me.Button8, BunifuAnimatorNS.DecorationType.None)
-        Me.Button8.FlatAppearance.BorderSize = 0
-        Me.Button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Font = New System.Drawing.Font("Shrikhand", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(75, Byte), Integer))
-        Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button8.Location = New System.Drawing.Point(15, 139)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(304, 51)
-        Me.Button8.TabIndex = 6
-        Me.Button8.Text = "Tercero"
-        Me.Button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.btnCRUD.BackColor = System.Drawing.Color.Transparent
+        Me.animacionSlideBar.SetDecoration(Me.btnCRUD, BunifuAnimatorNS.DecorationType.None)
+        Me.animacionSlidebarBack.SetDecoration(Me.btnCRUD, BunifuAnimatorNS.DecorationType.None)
+        Me.btnCRUD.FlatAppearance.BorderSize = 0
+        Me.btnCRUD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnCRUD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnCRUD.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCRUD.Font = New System.Drawing.Font("Shrikhand", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCRUD.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(75, Byte), Integer))
+        Me.btnCRUD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCRUD.Location = New System.Drawing.Point(15, 139)
+        Me.btnCRUD.Name = "btnCRUD"
+        Me.btnCRUD.Size = New System.Drawing.Size(304, 51)
+        Me.btnCRUD.TabIndex = 6
+        Me.btnCRUD.Text = "CRUD"
+        Me.btnCRUD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnCRUD.UseVisualStyleBackColor = False
         '
         'btnArreglos
         '
@@ -601,7 +601,7 @@ Partial Class MenuTodo
     Friend WithEvents btnMin As Button
     Friend WithEvents btnMax As Button
     Friend WithEvents btnCerrar As Button
-    Friend WithEvents Button8 As Button
+    Friend WithEvents btnCRUD As Button
     Friend WithEvents btnLibretaAhorro As Button
     Friend WithEvents btnArreglos As Button
     Friend WithEvents BunifuGradientPanel1 As Bunifu.Framework.UI.BunifuGradientPanel

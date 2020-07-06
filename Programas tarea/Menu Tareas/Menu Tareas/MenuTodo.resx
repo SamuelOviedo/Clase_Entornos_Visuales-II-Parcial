@@ -301,6 +301,14 @@
         BzVjxl8OVJanKhcSTgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnArreglos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAHxJREFUWEft
+        lsEJwCAMRbNEO1ghF40LdqAWSndRAxE9FPEiLfQ/+CBJ1HcMAVAIIaze+zMnakRktxbpudRH07l/MPNi
+        rYpzbmuGZgpE/ctalVzkdmiyAFurAgEIQAACEIAABCAAgS8IvLuU6lqeB++RB0bSuX89ruXgpxAlc/dj
+        YYpH/JUAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="btnProgClas.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAACNNJREFUeF7t
@@ -349,14 +357,6 @@
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAA5SURBVChTY7ASZP7vIsL831eC+X+4NPP/RDnm/1mKzP9L
         VJj/12ow/2/XZv4/UY/5/6hCuipk/g8AXTOYvQv5eCYAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnArreglos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAHxJREFUWEft
-        lsEJwCAMRbNEO1ghF40LdqAWSndRAxE9FPEiLfQ/+CBJ1HcMAVAIIaze+zMnakRktxbpudRH07l/MPNi
-        rYpzbmuGZgpE/ctalVzkdmiyAFurAgEIQAACEIAABCAAgS8IvLuU6lqeB++RB0bSuX89ruXgpxAlc/dj
-        YYpH/JUAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnHome.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

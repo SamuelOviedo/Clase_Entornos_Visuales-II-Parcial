@@ -89,6 +89,13 @@
     <Compile Include="BolsaSolidaria.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="conexion.vb" />
+    <Compile Include="CRUD.Designer.vb">
+      <DependentUpon>CRUD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LibretaAhorro.Designer.vb">
       <DependentUpon>LibretaAhorro.vb</DependentUpon>
     </Compile>
@@ -130,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BolsaSolidaria.resx">
       <DependentUpon>BolsaSolidaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD.resx">
+      <DependentUpon>CRUD.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LibretaAhorro.resx">
       <DependentUpon>LibretaAhorro.vb</DependentUpon>
